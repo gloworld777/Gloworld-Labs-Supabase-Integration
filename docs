@@ -1,18 +1,44 @@
-# Gloworld Labs + Supabase Integration
+# Getting Started with Gloworld Labs + Supabase
 
-This repository contains bootstrap SQL, docs, and branding resources for connecting Gloworld Labs apps to Supabase.
+This guide explains how to connect Gloworld Labs applications to your Supabase project.
 
-## 🚀 Quick Start
+---
 
-1. Create a new project at [Supabase Dashboard](https://supabase.com/dashboard).
-2. Open SQL Editor → paste and run [`bootstrap.sql`](./bootstrap.sql).
-3. In Gloworld GPT, connect your project using your **Project URL** + **Anon Key**.
-4. Done ✅
+## 1. Create a Supabase Project
+1. Go to [Supabase Dashboard](https://supabase.com/dashboard).
+2. Click **New Project** and enter your details.
+3. From the left menu, go to **Settings → API**.
+   - Copy your **Project URL**
+   - Copy your **Anon Key**
 
-## 📂 Repository Contents
-- `bootstrap.sql` → Sets up schema, RLS, storage bucket
-- `docs/getting-started.md` → Integration guide
-- `branding/` → Logos & media assets for Gloworld
+---
 
-## 📞 Support
-support@gloworld.com
+## 2. Run Bootstrap SQL
+1. In your Supabase project, go to **SQL Editor**.
+2. Paste the contents of [`bootstrap.sql`](../bootstrap.sql).
+3. Run the script.  
+   This will:
+   - Create the `gloworld_app` schema
+   - Add profiles, projects, connections, AI job tracking
+   - Enable Row Level Security (RLS) with secure policies
+   - Create a storage bucket (`gloworld-assets`)
+
+---
+
+## 3. Connect to Gloworld GPT
+1. In Gloworld GPT, open the **Supabase Connection** dialog.
+2. Paste your **Project URL** and **Anon Key**.
+3. (Optional) If needed, add your **Service Role Key** securely.
+
+---
+
+## 4. Verify the Integration
+- Test by creating a user → profile row is auto-generated.
+- Upload an asset → check it appears in the `gloworld-assets` bucket.
+- Run an AI job → verify it logs in the `gloworld_app.ai_jobs` table.
+
+---
+
+## 5. Support
+For issues or questions, contact:  
+📧 support@gloworld.com
