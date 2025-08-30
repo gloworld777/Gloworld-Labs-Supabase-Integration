@@ -1,0 +1,18 @@
+# Gloworld Labs + Supabase Integration
+
+This repository contains bootstrap SQL, docs, and branding resources for connecting Gloworld Labs apps to Supabase.
+
+## 🚀 Quick Start
+
+1. Create a new project at [Supabase Dashboard](https://supabase.com/dashboard).
+2. Open SQL Editor → paste and run [`bootstrap.sql`](./bootstrap.sql).
+3. In Gloworld GPT, connect your project using your **Project URL** + **Anon Key**.
+4. Done ✅
+
+## 📂 Repository Contents
+- `bootstrap.sql` → Sets up schema, RLS, storage bucket
+- `docs/getting-started.md` → Integration guide
+- `branding/` → Logos & media assets for Gloworld
+
+## 📞 Support
+support@gloworld.com
