@@ -1,0 +1,59 @@
+# Getting Started with Gloworld Labs + Supabase
+
+This guide explains how to connect your Supabase project to Gloworld Labs apps.
+
+---
+
+## 1. Create a Supabase Project
+1. Log into the [Supabase Dashboard](https://supabase.com/dashboard).
+2. Click **New Project**.
+3. Choose a name, password, and region, then click **Create Project**.
+
+---
+
+## 2. Configure Your API Keys
+1. Open your project in the dashboard.
+2. Go to **Settings → API**.
+3. Copy:
+   - **Project URL** (e.g., `https://xyzcompany.supabase.co`)
+   - **Anon Key** (public client key)
+   - (Optional) **Service Role Key** if using bootstrap automation
+
+---
+
+## 3. Run Bootstrap SQL
+1. Open the **SQL Editor** in your Supabase dashboard.
+2. Paste and run the contents of [`bootstrap.sql`](../bootstrap.sql).
+   - This sets up:
+     - A `gloworld_app` schema
+     - `profiles` table
+     - Row Level Security (RLS) policies
+     - Storage bucket for assets
+
+---
+
+## 4. Connect to Gloworld GPT
+1. In **Gloworld GPT**, go to **Connect Supabase**.
+2. Paste your **Project URL** and **Anon Key**.
+3. (Optional) If prompted for bootstrap setup, use the **Service Role Key** one-time.
+
+---
+
+## 5. Verify the Connection
+- Gloworld GPT will automatically:
+  - Ping your Supabase project
+  - Confirm schema setup
+  - Show connection status in the UI
+
+---
+
+## 6. Next Steps
+- Explore [Supabase Docs](https://supabase.com/docs).
+- Manage **Auth**: configure providers (Google, GitHub, etc.).
+- Manage **Storage**: upload and serve files from `gloworld-assets` bucket.
+- Manage **Edge Functions**: deploy your custom serverless functions.
+
+---
+
+## 💬 Support
+If you run into issues, reach out at **support@gloworld.com**.
